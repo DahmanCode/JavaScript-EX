@@ -50,4 +50,4 @@ console.log(Number.isInteger(flt).toString().length * parseInt(flt).toString().l
 
 // Assignment 7
 
-console.log(Math.trunc(Math.random() * 5))
+console.log(Math.trunc(Math.random() * 5)) // 0 || 1 || 2 || 3 || 4
