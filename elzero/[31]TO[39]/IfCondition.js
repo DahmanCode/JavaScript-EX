@@ -1,3 +1,45 @@
+// Cahallenge :
+
+let x = 10;
+
+if (x < 10) {
+  console.log(10);
+} else if (x >= 10 && x <= 40) {
+  console.log("10 To 40");
+} else if (x > 40) {
+  console.log("> 40");
+} else {
+  console.log("Unknown");
+}
+
+// OR 
+
+x < 10 ? console.log(10) : x >= 10 && x <= 40 ? console.log("10 To 40") : x > 40 ? console.log("> 40") : console.log("Unknown");
+
+// Write Previous Condition With Ternary If Syntax
+
+let st = "Elzero Web School";
+
+if ((st.length * 2).toString() === "34") {
+  console.log("Good");
+}
+// W Position May Change
+if (st.charAt(st.indexOf("W")).toLocaleLowerCase() === "w") {
+  console.log("Good");
+}
+
+if (typeof st.length !== "string") {
+  console.log("Good");
+}
+
+if (typeof st.length === "number") {
+  console.log("Good");
+}
+
+if (st.substr(0, 6).repeat(2) === "ElzeroElzero") {
+  console.log("Good");
+}
+
 // Assignment 1 :
 
 let num = 9; // "009"
