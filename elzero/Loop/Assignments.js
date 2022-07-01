@@ -162,3 +162,30 @@ for (let i = ++start3; i < mix.length; i++) {
 3
 4
 */
+
+// ===== While Assignment: ===== //
+// Assignment 1:
+
+let friends1 = ["Ahmed", "Sayed", "Ali", 1, 2, "Mahmoud", "Amany"];
+let index1 = 0;
+let counter = 0;
+
+/* for (let i = 0; i < friends1.length; i++) {
+  if (typeof friends1[i] !== "number" && friends1[i].charAt() !== "A")
+  console.log(friends1[i]);
+  
+} */
+
+while (index1 < friends1.length) {
+  if (typeof friends1[index1] !== "number" && friends1[index1].charAt() !== "A"){
+    counter++;
+    console.log(`${counter} => ${friends1[index1]}`);
+  }
+  index1++;
+};
+
+// Output
+/* 
+"1 => Sayed"
+"2 => Mahmoud"
+*/
