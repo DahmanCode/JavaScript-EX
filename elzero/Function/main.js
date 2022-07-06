@@ -13,9 +13,17 @@ function showInfo(User = "Un", Age = "Un", Rate = 0, Show = "Yes", ...Skills) {
   document.write(`<p>Age: ${Age}</p>`);
   document.write(`<p>Hour Rate: $${Rate}</p>`);
   if (Show === "Yes") {
-    document.write(`<p>Skills: ${Skills.join(" | ")}</p>`);
+    if (Skills.length > 0) {
+      document.write(`<p>Skills: ${Skills.join(" | ")}</p>`);
+    } else {
+      document.write(`<p>Skills: No Skills</p>`);
+    }
   } else {
-    document.write(`<p>Skills: No Skills</p>`);
+    if (Skills.length === 0) {
+      document.write(`<p>Skills: No Skills</p>`);
+    } else {
+      document.write(`<p>Skills Is Hidden</p>`);
+    }
   }
   document.write(`</div>`);
 }
