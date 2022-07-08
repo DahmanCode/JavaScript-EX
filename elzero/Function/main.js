@@ -65,15 +65,8 @@ function showDetails(...a) {
     a[i] === true ? bl = `You Are Available For Hire`
     : bl = `You Are Not Available For Hire`
   }
-  
-  document.write(`<div>`);
-  document.write(`<p>`);
 
-  document.write(`Hello ${name}, Your Age Is ${age} ${bl}`);
-
-  document.write(`<p>`);
-  document.write(`</div>`);
-
+  document.write(`<p>Hello ${name}, Your Age Is ${age} ${bl}</p>`);
 }
 
 showDetails("Osama", 38, true); 
