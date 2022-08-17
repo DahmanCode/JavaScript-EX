@@ -35,3 +35,15 @@ document.getElementById('password')
 document.getElementById('confirmPassword')
   .addEventListener('blur', checkInput);
 
+/* 
+  Exercise 03
+  -----------
+  Add a further validation to check if the user input in the password and confirm password inputs match. Show an error message if they do not.
+*/
+
+document.getElementById('confirmPassword')
+  .addEventListener('blur', (event) => {
+    if (event.target.value !== document.getElementById('password').value) {
+      event.target.insertAdjacentHTML('afterEnd', '<span class="text-danger">Password Should Match</span>');
+    }
+  });
