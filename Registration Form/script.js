@@ -47,3 +47,22 @@ document.getElementById('confirmPassword')
       event.target.insertAdjacentHTML('afterEnd', '<span class="text-danger">Password Should Match</span>');
     }
   });
+
+  /* 
+  Exercise 04
+  -----------
+  Ensure the 'Register' button is disabled until the user has entered valid data into all the input fields. Once they have, the regisration button should then be enabled.
+*/
+
+const btn = document.querySelector('button');
+btn.setAttribute('disabled', 'disabled');
+document.getElementById('registrationForm')
+  .addEventListener('change', (event) => {
+    const formIsFilled = Array.form(document.querySelectorAll('input'))
+      .every(input => input.value);
+    if (formIsFilled) {
+      btn.removeAttribute('disabled');
+    } else {
+      btn.setAttribute('disabled', 'disabled');
+    }
+  });
