@@ -48,7 +48,7 @@ document.getElementById('confirmPassword')
     }
   });
 
-  /* 
+/* 
   Exercise 04
   -----------
   Ensure the 'Register' button is disabled until the user has entered valid data into all the input fields. Once they have, the regisration button should then be enabled.
@@ -58,7 +58,7 @@ const btn = document.querySelector('button');
 btn.setAttribute('disabled', 'disabled');
 document.getElementById('registrationForm')
   .addEventListener('change', (event) => {
-    const formIsFilled = Array.form(document.querySelectorAll('input'))
+    const formIsFilled = Array.from(document.querySelectorAll('input'))
       .every(input => input.value);
     if (formIsFilled) {
       btn.removeAttribute('disabled');
@@ -66,3 +66,19 @@ document.getElementById('registrationForm')
       btn.setAttribute('disabled', 'disabled');
     }
   });
+
+/* 
+  Exercise 05
+  -----------
+  When the user clicks the 'Register' button, a message should be displayed informing them of a successful user registration.
+*/
+
+const form = document.getElementById('registrationForm');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const alert = document.createElement('div');
+  alert.classList.add('alert', 'alert-success');
+  alert.innerText = 'User registered successfully';
+  form.prepend(alert);
+})
