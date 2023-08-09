@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>JavaScript30 Navbar</title>
+</head>
+<body>
+  
+  <header>
+    <div class="logo">
+      <img src="assets/logo.svg" alt="">
+    </div>
+    <img src="assets/menu.svg" class="menu" alt="" onclick="toogleMenu()">
+    <nav>
+      <ul class="navbar" id="navbar">
+        <img class="close" src="assets/Close.svg" alt="" onclick="toogleMenu()">
+        <li>
+          <a href="#">
+            Products
+            <img class="down" src="assets/back.png" alt="">
+          </a>
+          <ul class="dropdown">
+            <li>
+              <img src="assets/Spense_Icon.svg" alt="">
+              <div class="text">
+                <h3>Spense</h3>
+                <p>
+                  Spense is a landing page for writers, 
+                  Great for practicing absolute positioning 
+                  and flex layouts.
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="assets/Fiber_Icon.svg" alt="">
+              <div class="text">
+                <h3>Fiber Landing Page</h3>
+                <p>
+                  An online portfolio generator, 
+                  Great for practicing absolute positioning 
+                  and flex layouts.
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="assets/Gradie_Icon.svg" alt="">
+              <div class="text">
+                <h3>Gradie Sign Up Page</h3>
+                <p>
+                  Gradie is a simple sign up page, 
+                  Great to practicing centering layouts.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Challenges</a>
+        </li>
+        <li>
+          <a href="#">Resources</a>
+        </li>
+        <li>
+          <a href="#">Other Links</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="sign-in">
+      <a href="#">Sign In</a>
+      <button class="btn">Try for free</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="content">
+        <h1>Ondeck is your remote <span>conference calling tool</span></h1>
+        <p>
+          Ondeck is a service that allows you to join a conference call from 
+          anywhere with any device. It's easy to use and has a great interface.
+        </p>
+        <button class="btn">Try for free</button>
+        <div class="rating">
+          <p>5.0 Rating based on reviews from:</p>
+          <img src="assets/Capterra Logo.svg" alt="">
+          <img src="assets/AlternativeTo Logo.svg" alt="">
+          <img width="25" height="25" src="assets/shopify-logo.svg" alt="">
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="assets/Hero Image.png" alt="">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Trusted by 3+ million people at companies like</p>
+    <div class="logos">
+      <div class="logos-slide">
+        <img src="assets/Spotify Logo.svg" alt="">
+        <img src="assets/Walmart Logo.svg" alt="">
+        <img src="assets/Shopify Logo.svg" alt="">
+        <img src="assets/Netflix Logo.svg" alt="">
+        <img src="assets/Spotify Logo.svg" alt="">
+        <img src="assets/Walmart Logo.svg" alt="">
+        <img src="assets/Shopify Logo.svg" alt="">
+        <img src="assets/Netflix Logo.svg" alt="">
+      </div>
+    </div>
+    <div class="credit">
+      <p>
+        © 2023 Ondeck | 
+        <a href="https://twitter.com/elaammari_" target="_blank">ELAAMMARI</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
