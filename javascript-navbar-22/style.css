@@ -8,7 +8,6 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  width: 100vw;
   height: 100vh;
   overflow: hidden;
   background-color: #f3ede5;
@@ -105,18 +104,23 @@ nav a:hover::after {
   width: 100%;
 }
 
+.menu,
+.close {
+  display: none;
+}
+
 /* dropdown */
 
-nav ul li:first-child {
+#dropdown  {
   position: relative;
   padding-block: 1rem;
 }
 
-nav ul li:first-child:hover .dropdown {
+#dropdown:hover .dropdown {
   display: block;
 }
 
-nav .down {
+#dropdown .down {
   position: relative;
   top: 4px;
   left: 2px;
@@ -124,16 +128,19 @@ nav .down {
   transform: rotate(-90deg);
 }
 
-nav .dropdown {
+#dropdown .dropdown {
   position: absolute;
   top: 3.5rem;
+  /* display: grid; */
   display: none;
   width: 460px;
+  max-width: 460px;
   background-color: white;
   padding: 2rem 2.5rem;
   border-radius: 1rem;
   font-size: .9rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+  z-index: 9;
 }
 
 .dropdown::after {
@@ -146,7 +153,7 @@ nav .dropdown {
   border-bottom: .8rem solid white;
 }
 
-nav .dropdown:hover {
+#dropdown .dropdown:hover {
   display: grid;
 }
 
@@ -237,7 +244,7 @@ main {
 }
 
 .container .hero-img {
-  width: 50%;
+  /* width: 50%; */
   max-width: 400px;
 }
 
@@ -261,6 +268,7 @@ footer p {
 }
 
 footer .logos {
+  overflow: hidden;
   position: relative;
   width: 100%;
   display: flex;
@@ -331,6 +339,10 @@ footer .credit {
   font-size: .9rem;
 }
 
+.credit a {
+  color: #1e4921;
+}
+
 @media screen and (max-width: 1048px) {
   body {
     height: auto;
@@ -362,9 +374,12 @@ footer .credit {
     gap: 3rem;
     height: 100%;
   }
+
+  .container .content {
+    width: auto;
+  }
   
   .logos-slide img {
-    margin: 0 40px;
     height: 45px;
   }
 }
@@ -375,7 +390,14 @@ footer .credit {
     display: none;
   }
 
+  header .logo img {
+    object-fit: cover;
+    width: 7.5rem;
+    cursor: pointer;
+  }
+
   header {
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
   }
@@ -393,7 +415,7 @@ footer .credit {
   }
   
   nav .navbar {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     display: block;
@@ -413,24 +435,15 @@ footer .credit {
 
   .close {
     display: none;
+    z-index: 99;
   }
 
   .show .close{
     display: block;
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: .5rem;
+    right: .5rem;
     cursor: pointer;
-  }
-
-  .navbar.show + ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li:first-child {
-    padding-block: 0;
   }
   
   /* nav ul li:first-child a {
@@ -439,8 +452,60 @@ footer .credit {
     align-items: center;
     justify-content: space-between;
   } */
-  
-  header nav a {
+
+  .navbar a {
     margin: 1rem 2rem;
+  }
+
+  .navbar .active .dropdown {
+    position: absolute;
+  }
+
+  #dropdown  {
+    position: relative;
+    padding-block: 0;
+  }
+
+  #dropdown .dropdown {
+    width: auto;
+  }
+
+  #dropdown .dropdown {
+    padding: 1rem 1.5rem;
+    font-size: .8rem;
+  }
+
+  .dropdown li {
+    display: inline-block;
+  }
+
+  .container {
+    padding-inline: 1rem;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    margin-bottom: .8rem;
+  }
+
+  .rating p {
+    margin-right: .5rem;
+  }
+
+  .logos-slide img {
+    margin: 0 20px;
+    height: 40px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .content h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: .9rem;
   }
 }
