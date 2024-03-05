@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Edit Remove HTML Table Row</title>
+    <meta charset="windows-1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+
+      #form {
+        display: none;
+      }
+
+      .filde {
+        width: 320px;
+        margin-bottom: 12px;
+        display: flex;
+      }
+
+      .filde label {
+        flex: 1;
+      }
+
+      .selected {
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h2>Liste des etudiants:</h2>
+        <table id="table">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Nom</th>
+              <th>Prenom</th>
+              <th>Semester</th>
+              <th>Filiere</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="student-info">
+            <tr>
+              <td>3</td>
+              <td>Naciri</td>
+              <td>Hamza</td>
+              <td>S6</td>
+              <td>Math</td>
+              <td>S2</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button id="show_form">Ajouter</button>
+        <button id="delete">Remove</button>
+      </div>
+      <div id="form">
+        <h2>Ajouter un etudiant:</h2>
+        <div class="filde">
+          <label for="code">Code :</label>
+          <input type="text" name="code" id="code" />
+        </div>
+        <div class="filde">
+          <label for="code">Nom :</label>
+          <input type="text" name="nom" id="nom" />
+        </div>
+        <div class="filde">
+          <label for="code">Prenom :</label>
+          <input type="text" name="Prenom" id="prenom" />
+        </div>
+        <div class="filde">
+          <label for="code">Semestre :</label>
+          <input type="text" name="Semestre" id="semestre" />
+        </div>
+        <div class="filde">
+          <label for="code">Filiere :</label>
+          <input type="text" name="Filiere" id="filiere" />
+        </div>
+        <div class="filde">
+          <label for="code">Action :</label>
+          <input type="text" name="Action" id="action" />
+        </div>
+
+        <button id="add">Ajouter</button>
+        <button id="cancel">Annule</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
